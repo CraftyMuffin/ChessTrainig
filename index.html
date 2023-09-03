@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>О сайте</title>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Добро пожаловать на наш сайт ChessTraining. Мы сделали этот сайт для решения задач по шахматам. Решая их каждый день, вы будете становиться всё сильнее и сильнее. Жми кнопку в меню и становись лучшим игроком шахмат!">
+    <link rel="shortcut icon" href="https://i.imgur.com/fcWSaD9.png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Стили для кнопки */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .animated-button {
+            background-color: #9400D3; /* Фиолетовый цвет */
+            color: #fff;
+            padding: 20px 40px; /* Увеличьте отступы, чтобы сделать кнопку больше */
+            border: none;
+            border-radius: 10px; /* Увеличьте радиус скругления углов */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Анимация при наведении курсора */
+        .animated-button:hover {
+            background-color: #6A0DAD; /* Фиолетовый цвет при наведении */
+            transform: scale(1.1); /* Увеличение кнопки при наведении */
+        }
+
+        /* Стили для текста заголовка и параграфа */
+        h1 {
+            font-size: 28px; /* Уменьшили размер заголовка */
+            margin-top: 20px; /* Добавили верхний отступ */
+        }
+
+        p {
+            font-size: 20px; /* Уменьшили размер параграфа */
+            margin-top: 10px; /* Добавили верхний отступ */
+        }
+
+        /* Добавлено свойство для картинки */
+        img {
+            margin-top: 30px; /* Увеличили верхний отступ для картинки */
+        }
+    </style>
+</head>
+<body style="background-color: #fff;"> <!-- Изменен цвет фона на белый -->
+    <div class="container">
+        <!-- Пустые строки -->
+        <div style="height: 100px;"></div>
+        <!-- Конец пустых строк -->
+        <br></br>
+        <img src="https://i.imgur.com/457oPjI.png" alt="" width="1400" height="760">
+        <h1>Добро пожаловать!</h1>
+        <p>
+            Добро пожаловать на наш сайт <em>ChessTraining</em>.<br>
+            Мы сделали этот сайт для решения задач по шахматам.<br>
+            Решая их каждый день, вы будете становиться всё сильнее и сильнее. <br>
+            <b>Жми кнопку в меню и становись лучшим игроком шахмат!</b>
+        </p>
+        <button type="button" class="animated-button">Нажми меня</button>
+        <hr>
+        <ul>
+            <a href="https://lichess.org/team/craftymuffins-club" target="_blank">
+                <li>Наш клуб на Личесс</li>
+                <br></br>
+            </a>
+        </ul>
+    </div>
+</body>
+</html>
