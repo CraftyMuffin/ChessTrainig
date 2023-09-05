@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>О сайте</title>
+    <title>ChessTraining</title>
     <meta charset="utf-8">
     <meta name="keywords" content="Добро пожаловать на наш сайт ChessTraining. Мы сделали этот сайт для решения задач по шахматам. Решая их каждый день, вы будете становиться всё сильнее и сильнее. Жми кнопку в меню и становись лучшим игроком шахмат!">
     <link rel="shortcut icon" href="https://i.imgur.com/fcWSaD9.png">
@@ -24,7 +24,6 @@
             border-radius: 10px; /* Увеличьте радиус скругления углов */
             cursor: pointer;
             transition: background-color 0.3s ease, transform 0.3s ease;
-            text-decoration: none;
         }
 
         /* Анимация при наведении курсора */
@@ -53,39 +52,59 @@
         .task-menu {
             display: none; /* Скрываем меню по умолчанию */
         }
+
+        .task-menu.active {
+            display: block; /* Показываем меню при активации */
+        }
+
+        .task-levels {
+            list-style: none;
+            padding: 0;
+        }
+
+        .task-levels li {
+            margin: 10px 0;
+        }
+
+        /* Стили для опции подписки */
+        .subscription-option {
+            font-size: 18px;
+            margin-top: 20px;
+        }
     </style>
 </head>
-<body style="background-color: #fff;"> <!-- Изменен цвет фона на белый -->
+<body style="background-color: #fff;">
     <div class="container">
-        <!-- Пустые строки -->
-        <div style="height: 100px;"></div>
-        <!-- Конец пустых строк -->
-        <br></br>
         <img src="https://i.imgur.com/457oPjI.png" alt="" width="1400" height="760">
         <h1>Добро пожаловать!</h1>
         <p>
             Добро пожаловать на наш сайт <em>ChessTraining</em>.<br>
             Мы сделали этот сайт для решения задач по шахматам.<br>
             Решая их каждый день, вы будете становиться всё сильнее и сильнее. <br>
-            <b>Жми кнопку в меню и становись лучшим игроком шахмат!</b>
+            <b>Жми кнопку, чтобы начать решать задачи!</b>
         </p>
-        <a type="button" class="animated-button" href="puzzle.html">К задачам</a>
-                <div class="task-menu">
+        <button type="button" class="animated-button" onclick="showTaskMenu()">К задачам</button>
+        <div class="task-menu">
             <h2>Выберите уровень сложности:</h2>
             <ul class="task-levels">
                 <li><a href="tasks.html?level=easy">Легкий</a></li>
                 <li><a href="tasks.html?level=medium">Средний</a></li>
                 <li><a href="tasks.html?level=hard">Сложный</a></li>
             </ul>
-            <p class="subscription-option">Дополнительные задачи доступны по подписке за деньги.</p>
         </div>
         <hr>
         <ul>
             <a href="https://lichess.org/team/craftymuffins-club" target="_blank">
                 <li>Наш клуб на Личесс</li>
-                <br></br>
             </a>
         </ul>
     </div>
+
+    <script>
+        function showTaskMenu() {
+            var taskMenu = document.querySelector('.task-menu');
+            taskMenu.classList.add('active');
+        }
+    </script>
 </body>
 </html>
