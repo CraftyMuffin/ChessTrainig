@@ -2,14 +2,18 @@
 <html>
 
 <head>
-    <title>Задачи</title>
+    <title>Рандомные задачи</title>
     <link rel="shortcut icon" href="https://i.imgur.com/fcWSaD9.png">
     <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
         body {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0
+            margin: 0;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/chessboard-1.0.0.min.css">
@@ -51,7 +55,6 @@
         };
 
         var board = ChessBoard('board', config);
-        <div id="myBoard" style="width: 400px"></div>
     </script>
 </body>
 
