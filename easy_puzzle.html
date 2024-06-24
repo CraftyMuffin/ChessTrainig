@@ -29,7 +29,7 @@
         var game = new Chess();
         var config = {
             draggable: true,
-            pieceTheme: 'img/chesspieces/{piece}.png',
+            pieceTheme: 'https://cdnjs.cloudflare.com/ajax/libs/chessboard-js/1.0.0/img/chesspieces/wikipedia/{piece}.png',
             position: 'k7/7R/6R1/8/8/8/8/4K3 w - - 0 1', // Позиция для задачи "мат в 1 ход"
             onDragStart: (source, piece, position, orientation) => {
                 if (game.game_over()) return false;
