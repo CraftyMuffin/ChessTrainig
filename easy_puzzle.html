@@ -30,9 +30,8 @@
         var config = {
             draggable: true,
             pieceTheme: 'img/chesspieces/{piece}.png',
-            position: 'start', // Could be replaced with any valid position
+            position: '4k3/4P3/8/8/8/8/8/4K3 w - - 0 1', // Позиция для задачи "мат в 1 ход"
             onDragStart: (source, piece, position, orientation) => {
-
                 if (game.game_over()) return false;
 
                 if ((game.turn() === 'w' && piece.search(/^b/) !== -1) ||
@@ -44,13 +43,20 @@
                 var move = game.move({
                     from: source,
                     to: target,
-                    promotion: 'q' // NOTE: always promote to a queen for example simplicity
-                })
+                    promotion: 'q' // Всегда превращаем пешку в ферзя
+                });
 
-                if (move === null) return 'snapback'
+                if (move === null) return 'snapback';
+
+                // Проверяем, решена ли задача (мат)
+                setTimeout(() => {
+                    if (game.in_checkmate()) {
+                        alert('Мат! Задача решена.');
+                    }
+                }, 250);
             },
             onSnapEnd: () => {
-                board.position(game.fen())
+                board.position(game.fen());
             },
         };
 
